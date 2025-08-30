@@ -99,6 +99,6 @@ if jwt.HasTenantPermission(*claims, "owner", perm) {
     fmt.Println("User can create campaigns")
 }
 ```
-License
+## License
 
 MIT License © 2025 Moriba SL

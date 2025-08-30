@@ -10,11 +10,9 @@ import (
 
 func TestManager_IssueAccessToken(t *testing.T) {
 
-	secret := []byte("secret")
-
 	manager, err := ose_jwt.NewManager(ose_jwt.Config{
 		Prefix: "FMC",
-		Secret: secret,
+		Secret: "secret",
 		Issuer: "ose",
 	})
 

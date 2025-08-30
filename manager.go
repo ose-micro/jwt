@@ -10,7 +10,7 @@ import (
 
 type Config struct {
 	Prefix     string        `json:"prefix"`
-	Secret     []byte        `json:"secret"`
+	Secret     string        `json:"secret"`
 	Issuer     string        `json:"issuer"`
 	AccessTTL  time.Duration `json:"access_ttl"`
 	RefreshTTL time.Duration `json:"refresh_ttl"`
@@ -47,7 +47,7 @@ func NewManager(config Config) (*Manager, error) {
 
 	return &Manager{
 		prefix:     prefix,
-		secret:     config.Secret,
+		secret:     []byte(config.Secret),
 		issuer:     config.Issuer,
 		accessTTL:  defaultDuration(config.AccessTTL, 15*time.Minute),
 		refreshTTL: defaultDuration(config.RefreshTTL, 7*24*time.Hour),
