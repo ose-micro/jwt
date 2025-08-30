@@ -1,12 +1,16 @@
 # ose-jwt
 
-`ose-jwt` is a Go package for managing JSON Web Tokens (JWT) with support for **access tokens**, **refresh tokens**, and
+> `ose-jwt` is a Go package for managing JSON Web Tokens (JWT) with support for **access tokens**, **refresh tokens**, and
 **purpose-specific tokens**. It provides a structured way to include **multi-tenant roles and permissions**, as well as
 custom claims. The package is lightweight, secure, and easy to integrate.
 
 ---
 
-## Features
+[![Go Reference](https://pkg.go.dev/badge/github.com/ose-micro/jwt.svg)](https://pkg.go.dev/github.com/ose-micro/jwt)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ose-micro/jwt)](https://goreportcard.com/report/github.com/ose-micro/jwt)
+[![License](https://img.shields.io/github/license/ose-micro/jwt)](LICENSE)
+
+## ✨ Features
 
 - Issue JWTs for **access**, **refresh**, or **purpose** tokens
 - Supports **multi-tenant role and permission claims**
@@ -17,7 +21,7 @@ custom claims. The package is lightweight, secure, and easy to integrate.
 
 ---
 
-## Installation
+## 🚀 Installation
 
 ```bash
 go get github.com/ose-micro/jwt
