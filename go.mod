@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/golang-jwt/jwt/v5 v5.3.0
-	github.com/ose-micro/common v0.0.3
+	github.com/ose-micro/common v0.1.0
 	github.com/ose-micro/rid v0.0.6
 	github.com/stretchr/testify v1.11.1
 )

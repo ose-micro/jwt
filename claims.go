@@ -2,14 +2,14 @@ package ose_jwt
 
 import (
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/ose-micro/common"
+	"github.com/ose-micro/common/claims"
 )
 
 // Tenant holds role + permissions for a specific tenant
 type Tenant struct {
 	Role        string              `json:"role"`
 	Tenant      string              `json:"tenant"`
-	Permissions []common.Permission `json:"permissions"`
+	Permissions []claims.Permission `json:"permissions"`
 }
 
 type TokenKind string
@@ -20,7 +20,7 @@ const (
 	PurposeToken TokenKind = "purpose"
 )
 
-// Claims defines our custom JWT payload
+// Claims defines our custom JWT dto
 type Claims struct {
 	Sub       string            `json:"sub"`
 	Kind      TokenKind         `json:"typ"`

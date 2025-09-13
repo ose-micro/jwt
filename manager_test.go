@@ -9,7 +9,6 @@ import (
 )
 
 func TestManager_IssueAccessToken(t *testing.T) {
-
 	manager, err := ose_jwt.NewManager(ose_jwt.Config{
 		Prefix: "FMC",
 		Secret: "secret",
@@ -44,6 +43,22 @@ func TestManager_IssueAccessToken(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+
+	t.Log(token)
+}
+
+func TestManager_ParseClaims(t *testing.T) {
+	manager, err := ose_jwt.NewManager(ose_jwt.Config{
+		Prefix: "FMC",
+		Secret: "mI7r9jQpLk3uXy6fHnWb2sEwRtAq8fGhJaL0yUzXk1E=",
+		Issuer: "Fundme.cloud",
+	})
+
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	token := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJVU1IyNTA4Mi0xODExLTQwMTctMTM3Mi00NjIxMDYwOEI3MjkiLCJ0eXAiOiJyZWZyZXNoIiwidGVuYW50cyI6eyJUTlQyNTA4Mi0xMzEyLUMzNEUtMjQ0QS1BOEFDNDAwNkVDNkEiOnsicm9sZSI6IlJPTDI1MDgyLTE1NDEtRTYxNS1BQkVGLUVGRTg4RjE4MDY4RSIsInRlbmFudCI6IlROVDI1MDgyLTEzMTItQzM0RS0yNDRBLUE4QUM0MDA2RUM2QSIsInBlcm1pc3Npb25zIjpbeyJyZXNvdXJjZSI6ImNhbXBhaWduIiwiYWN0aW9uIjoidmlldyJ9LHsicmVzb3VyY2UiOiJjYW1wYWlnbiIsImFjdGlvbiI6ImVkaXQifSx7InJlc291cmNlIjoiY2FtcGFpZ24iLCJhY3Rpb24iOiJjcmVhdGUifSx7InJlc291cmNlIjoiY2FtcGFpZ24iLCJhY3Rpb24iOiJkZWxldGUifV19fSwianRpIjoiMjUwODMxICAtMDEzNS02QTgwLTQ4QjMtMTFGNUM0QzcxQzM3IiwiZXhwIjoxNzU2NjA0MTM3LCJpYXQiOjE3NTY2MDQxMzd9.QYyRZBeORFxmRQSDG4JN_Xk90fZnPHuRwtsIlHi2pVY"
 
 	claims, err := manager.ParseClaims(token)
 	if err != nil {

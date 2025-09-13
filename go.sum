@@ -4,6 +4,7 @@ github.com/golang-jwt/jwt/v5 v5.3.0 h1:pv4AsKCKKZuqlgs5sUmn4x8UlGa0kEVt/puTpKx9v
 github.com/golang-jwt/jwt/v5 v5.3.0/go.mod h1:fxCRLWMO43lRc8nhHWY6LGqRcf+1gQWArsqaEUEa5bE=
 github.com/ose-micro/common v0.0.3 h1:UQbnTWm0rPkSAXWoGiEftJM8s6coZ1On2KZzUvs/Zc0=
 github.com/ose-micro/common v0.0.3/go.mod h1:6Nh/4f7/kFKJu/JrXIAw2aWZXGlV9ozGne/rjbNifmc=
+github.com/ose-micro/common v0.1.0/go.mod h1:xkS+075Wt1GMdERqTcxcREF2ViC6quD7ww4v2zL8NPU=
 github.com/ose-micro/rid v0.0.6 h1:kxwzZDMv4g4sd6JEpCVY9s4FWK9JEg2N03umf+EbVfA=
 github.com/ose-micro/rid v0.0.6/go.mod h1:FA+tRolrPFXNUmbq2UWgoBZxOmMc+0Cwi6JpDIujvfQ=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
